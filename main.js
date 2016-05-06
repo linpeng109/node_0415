@@ -1,13 +1,12 @@
 /**
  * Created by Mars on 2016/5/3.
  */
-var express = require('express');
-var app = new express();
+const Express = require('express');
+const app = new Express();
 
 app.set('port', 3000);
 
-var database = require('./lib/database');
-var User = require('./lib/user')(database);
+const database = require('./lib/database');
 
 /**
  * root
@@ -22,6 +21,7 @@ app.get('/', function (req, res) {
  * /insert
  */
 app.get('/user/insert', function (req, res) {
+  const User = require('./lib/user')(database);
   var user = new User({
     userName: 'abbac',
     passWord: 'abbac'
