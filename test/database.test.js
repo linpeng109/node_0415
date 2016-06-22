@@ -24,7 +24,7 @@ describe('Test Mongodb', function () {
       passWord: uuidv4,
       weiXing: uuidv4,
       eMail: uuidv4 + '@163.com',
-      department: 'technology'
+      department: 'Technology'
     });
     User.insert(user, function (err, result) {
       if (err) {
